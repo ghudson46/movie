@@ -14,9 +14,12 @@ $(document).ready(function(event) {
       // if call is successful run this function
     }).then(function(response) {
       console.log(response);
-      let movies = response.Search;
-      let output = '';
+      let movies = response.Search; // stores every movie that the search returns
+      let output = ''; // leave it empty so we can add output dynamically
+
+      // jquery each function loops through each item in the movies variable 
       $.each(movies, function(index, movie) {
+        // output is dynamically added to HTML for each movie
         output += `
           <div class="col-md-3>
             <div class="well text-center">
@@ -27,6 +30,7 @@ $(document).ready(function(event) {
           </div>
         `;
       });
+      // output is added as html into the div with ID movies
       $('#movies').html(output);
       // if call is unsuccessful run this function
     }).catch(function(error) {
