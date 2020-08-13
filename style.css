@@ -1,11 +1,15 @@
-.col-md-3 img, #movie img {
-  width: 100%;
+.green {
+  color: green;
 }
 
-.col-md-3 {
-  height: 390px;
+.yellow {
+  color: yellow;
 }
 
-.col-md-3 img {
-  height: 240px;
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
 }
