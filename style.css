@@ -1,3 +1,75 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+h3 {
+  color: #bada55;
+}
+
+a {
+text-decoration: none;
+color: #bada55;
+font-size: 50px !important;
+font-weight: bold;
+}
+
+img {
+  position: relative;
+  top: 50px;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 450px;
+  margin: 0 0 400px 0;
+}
+
+h5 {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  width: 100%;
+}
+
+.title {
+position: relative;
+left: 25%;
+width: 5%;
+
+}
+
+.year {
+  position: relative;
+  top: 10px;
+  left: calc(12% + 10px);
+}
+
+.time {
+  position: relative;
+  top: 600px;
+}
+
+.director {
+  position: relative;
+  top: 550px;
+  right: 22%;
+}
+
+.actors {
+  position: relative;
+  bottom: 200px;
+  left: 19%;
+}
+
+.plot {
+  width: 500px;
+}
+
+.jumbotron {
+  background-color: gray;
+}
+
 .green {
   color: green;
 }
@@ -12,4 +84,8 @@
 
 .red {
   color: red;
+}
+
+.text-center {
+  text-align: center;
 }

@@ -23,22 +23,22 @@ $(document).ready(function(event) {
       let moviePlot = response.Plot;
       let movieScore = response.Ratings[1].Value;
       let movieContainer = document.getElementById("movies");
-      let linebreak = document.createElement("br");
+      // let linebreak = document.createElement("br");
       
       movieContainer.innerHTML += "<img src='" + moviePoster + "'>";
-      movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5>" + movieTitle + "</h5>";
-      movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5>" + movieYear + "</h5>";
-      movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5>" + movieRuntime + "</h5>";
-      movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5>" + movieDirector + "</h5>";
-      movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5>" + movieActors + "</h5>";
-      movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5>" + moviePlot + "</h5>";
-      movieContainer.appendChild(linebreak);
+      // movieContainer.appendChild(linebreak);
+      movieContainer.innerHTML += "<h5 class='title'>" + movieTitle + "</h5>";
+      // movieContainer.appendChild(linebreak);
+      movieContainer.innerHTML += "<h5 class='year'>(" + movieYear + ")</h5>";
+      // movieContainer.appendChild(linebreak);
+      movieContainer.innerHTML += "<h5 class='time'>Run Time: " + movieRuntime + "</h5>";
+      // movieContainer.appendChild(linebreak);
+      movieContainer.innerHTML += "<h5 class='director'> Directed By: " + movieDirector + "</h5>";
+      // movieContainer.appendChild(linebreak);
+      movieContainer.innerHTML += "<h5 class='actors'> Cast: " + movieActors + "</h5>";
+      // movieContainer.appendChild(linebreak);
+      movieContainer.innerHTML += "<h5 class='plot'>" + moviePlot + "</h5>";
+      // movieContainer.appendChild(linebreak);
       movieContainer.innerHTML += "<h5 id='score'>Score: " + movieScore + "</h5>";
 
       console.log(movieScore);
@@ -55,6 +55,7 @@ $(document).ready(function(event) {
       }
 
     }).catch(function(error) {
+      alert("We didn't recognize that movie. Please try again!");
       console.log(error);
     })
   });
