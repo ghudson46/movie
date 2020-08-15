@@ -177,6 +177,18 @@ h5 {
   text-align: center;
 }
 
+.submit-btn {
+  color: #735983;
+  background-color: #cc6686;
+  font-size: 24px;
+  padding: 10px;
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 1px 1px black;
+  border: #735983;
+  border-radius: 5px;
+  margin: 0 0 20px 10px;
+}
+
 
 #movieTitle {
  display: flex;
@@ -211,6 +223,15 @@ h5 {
   display: flex;
   justify-content: center;
   margin: 20px;
+}
+
+#userScore {
+  display: flex;  
+  justify-content: center;
+}
+
+#userInput {
+  margin: 0 0 10px 30px;
 }
 
 .navbar-brand:hover {

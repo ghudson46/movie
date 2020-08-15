@@ -1,5 +1,6 @@
 // does not start until document is ready
 $(document).ready(function(event) {
+  let submitBtn = document.getElementById("submitBtn");
   let movieContainer = '';
   // when enter is hit in the search form function runs
   $("#searchForm").on("submit", function(event) {
@@ -35,23 +36,27 @@ $(document).ready(function(event) {
       let castDiv = document.getElementById("movieCast");
       let plotDiv = document.getElementById("moviePlot");
       let scoreDiv = document.getElementById("movieScore");
-      // let linebreak = document.createElement("br");
+      let userScore = document.getElementById("userScore");
+     
       
       posterDiv.innerHTML += "<img src='" + moviePoster + "'>";
-      // movieContainer.appendChild(linebreak);
+      
       titleDiv.innerHTML += "<h5 class='title'>" + movieTitle + "</h5>";
-      // movieContainer.appendChild(linebreak);
+      
       titleDiv.innerHTML += "<h5 class='year'>(" + movieYear + ")</h5>";
-      // movieContainer.appendChild(linebreak);
+      
       timeDiv.innerHTML += "<h5 class='time'>Run Time: " + movieRuntime + "</h5>";
-      // movieContainer.appendChild(linebreak);
+    
       directorDiv.innerHTML += "<h5 class='director'> Directed By: " + movieDirector + "</h5>";
-      // movieContainer.appendChild(linebreak);
+      
       castDiv.innerHTML += "<h5 class='actors'> Starring: " + movieActors + "</h5>";
-      // movieContainer.appendChild(linebreak);
+     
       plotDiv.innerHTML += "<h5 class='plot'>" + moviePlot + "</h5>";
-      // movieContainer.appendChild(linebreak);
+     
       scoreDiv.innerHTML += "<h5 id='score'>Score: " + movieScore + "</h5>";
+
+      userScore.innerHTML += "<h5>Rate this movie 0-100</h5><br><input type='number' id='userInput' name='userInput' min='0' max='100'><button class='submit-btn' id='submitBtn'>Submit</button>";
+
 
       console.log(movieScore);
         
@@ -75,4 +80,9 @@ $(document).ready(function(event) {
   function clearContainer() {
     movieContainer.innerHTML = '';
   }
+
+  $("#submitBtn").on("click", function() {
+    // let userRating = userInput.value;
+    console.log('click works');
+  })
  })
