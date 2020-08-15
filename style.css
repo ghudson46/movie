@@ -1,73 +1,54 @@
 body {
-  background-color: black;
+  background-color: #255d83;
   color: white;
 }
 
 h3 {
-  color: #bada55;
+  color: #735983;
+  font-family: 'Bebas Neue', cursive;
+}
+
+h3 {
+  color: #735983;
 }
 
 a {
 text-decoration: none;
-color: #bada55;
+color: #735983;
 font-size: 50px !important;
 font-weight: bold;
 }
 
 img {
   position: relative;
-  top: 50px;
+  top: 80px;
   left: calc(50% - 150px);
   width: 300px;
   height: 450px;
-  margin: 0 0 400px 0;
+  margin: 0 0 100px 0;
+  box-shadow: 10px 10px 10px black;
 }
 
 h5 {
-  display: flex;
-  flex-direction: row;
+  font-family: 'Bebas Neue', cursive;
 }
 
-.container {
-  width: 100%;
-}
-
-.title {
-position: relative;
-left: 25%;
-width: 5%;
-
-}
-
-.year {
-  position: relative;
-  top: 10px;
-  left: calc(12% + 10px);
-}
-
-.time {
-  position: relative;
-  top: 600px;
-}
-
-.director {
-  position: relative;
-  top: 550px;
-  right: 22%;
-}
-
-.actors {
-  position: relative;
-  bottom: 200px;
-  left: 19%;
-}
-
-.plot {
-  width: 500px;
+.navbar-brand {
+  font-family: 'Bebas Neue', cursive;
 }
 
 .jumbotron {
   background-color: gray;
+}
+
+.year {
+  margin: 0 0 0 8px;
+}
+
+.title, .year {
+  font-size: 28px;
+  font-weight: bold;
+  font-style: italic;
 }
 
 .green {
@@ -88,4 +69,152 @@ width: 5%;
 
 .text-center {
   text-align: center;
+}
+
+
+#movieTitle {
+ display: flex;
+ justify-content: center;
+}
+
+#movieTime {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#movieDirector {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#movieCast {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#moviePlot {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#movieScore {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.navbar-brand:hover {
+  color: #735983;
+  opacity: 90%;
+  transform: scale(1.03);
+}
+}
+
+a {
+text-decoration: none;
+color: #735983;
+font-size: 50px !important;
+font-weight: bold;
+}
+
+img {
+  position: relative;
+  top: 20px;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 450px;
+  margin: 0 0 100px 0;
+  box-shadow: 10px 10px 10px black;
+}
+
+h5 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 28PX;
+  text-shadow: 1px 1px black;
+}
+
+
+.navbar-brand {
+  color: #cc6686;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.jumbotron {
+  background-color: #cc6686;
+}
+
+.year {
+  margin: 0 0 0 8px;
+}
+
+.title, .year {
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.green {
+  color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+#movieTitle {
+ display: flex;
+ justify-content: center;
+}
+
+#movieTime {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#movieDirector {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#movieCast {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#moviePlot {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+#movieScore {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.navbar-brand:hover {
+  color: #cc6686;
+  opacity: 90%;
+  transform: scale(1.03);
 }

@@ -1,9 +1,13 @@
 // does not start until document is ready
 $(document).ready(function(event) {
+  let movieContainer = '';
   // when enter is hit in the search form function runs
   $("#searchForm").on("submit", function(event) {
     event.preventDefault();
     // stores the user's input
+    
+    clearContainer();
+
     var searchValue = $("#searchText").val();
     // creates our url used for api call
     var queryURL = "https://www.omdbapi.com/?t=" + searchValue +"&apikey=db8b059d";
@@ -22,24 +26,32 @@ $(document).ready(function(event) {
       let moviePoster = response.Poster;
       let moviePlot = response.Plot;
       let movieScore = response.Ratings[1].Value;
-      let movieContainer = document.getElementById("movies");
+      let movieContainer = document.getElementById("movieContainer");
+      let posterDiv = document.getElementById("movieImg");
+      let titleDiv = document.getElementById("movieTitle");
+      let dateDiv = document.getElementById("movieYear");
+      let timeDiv = document.getElementById("movieTime");
+      let directorDiv = document.getElementById("movieDirector");
+      let castDiv = document.getElementById("movieCast");
+      let plotDiv = document.getElementById("moviePlot");
+      let scoreDiv = document.getElementById("movieScore");
       // let linebreak = document.createElement("br");
       
-      movieContainer.innerHTML += "<img src='" + moviePoster + "'>";
+      posterDiv.innerHTML += "<img src='" + moviePoster + "'>";
       // movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5 class='title'>" + movieTitle + "</h5>";
+      titleDiv.innerHTML += "<h5 class='title'>" + movieTitle + "</h5>";
       // movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5 class='year'>(" + movieYear + ")</h5>";
+      titleDiv.innerHTML += "<h5 class='year'>(" + movieYear + ")</h5>";
       // movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5 class='time'>Run Time: " + movieRuntime + "</h5>";
+      timeDiv.innerHTML += "<h5 class='time'>Run Time: " + movieRuntime + "</h5>";
       // movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5 class='director'> Directed By: " + movieDirector + "</h5>";
+      directorDiv.innerHTML += "<h5 class='director'> Directed By: " + movieDirector + "</h5>";
       // movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5 class='actors'> Cast: " + movieActors + "</h5>";
+      castDiv.innerHTML += "<h5 class='actors'> Starring: " + movieActors + "</h5>";
       // movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5 class='plot'>" + moviePlot + "</h5>";
+      plotDiv.innerHTML += "<h5 class='plot'>" + moviePlot + "</h5>";
       // movieContainer.appendChild(linebreak);
-      movieContainer.innerHTML += "<h5 id='score'>Score: " + movieScore + "</h5>";
+      scoreDiv.innerHTML += "<h5 id='score'>Score: " + movieScore + "</h5>";
 
       console.log(movieScore);
         
@@ -55,8 +67,12 @@ $(document).ready(function(event) {
       }
 
     }).catch(function(error) {
-      alert("We didn't recognize that movie. Please try again!");
+      alert("We didn't recognize that movie. Please check your spelling and try again!");
       console.log(error);
     })
   });
+
+  function clearContainer() {
+    movieContainer.innerHTML = '';
+  }
  })
